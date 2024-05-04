@@ -577,10 +577,10 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 
 //======== Total TextBox
 		    txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
-	        txtB_total.setForeground(Color.decode("#904C24")); 
-	        txtB_total.setBackground(Color.WHITE); 
-	        txtB_total.setOpaque(true); 
-	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
+	        txtB_total.setForeground(Color.black); // Custom text color
+	        txtB_total.setBackground(Color.WHITE); // Background to mimic text box
+	        txtB_total.setOpaque(true); // Necessary to apply background color
+	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); // Mimic text box border
 
 	        // Set layout and position
 	        txtB_total.setLayout(null);
@@ -588,7 +588,12 @@ public class OrderingFrame extends JFrame implements ActionListener {
 
 	
 
-	
+		 /*	txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
+		 	txtB_total.setForeground(Color.black);
+		 	txtB_total.setEnabled(false);
+		 	
+		 	txtB_total.setBounds( 110,470, 180, 30);
+		 	txtB_total.setLayout(null);*/
 
 //======== Discounted TextBox
 		 	txtB_discounted.setBounds( 190,510, 100, 30);
@@ -600,8 +605,6 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	txtB_payment.setBounds( 160,550, 130, 30);
 		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
-		 	txtB_discounted.setEnabled(true);
-
 		 
 //======== Change TextBox
 		 	txtB_change.setBounds( 140, 590, 150, 30);

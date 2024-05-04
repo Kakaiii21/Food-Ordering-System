@@ -582,7 +582,6 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	        txtB_total.setOpaque(true); 
 	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
 
-	        // Set layout and position
 	        txtB_total.setLayout(null);
 	        txtB_total.setBounds(110, 470, 180, 30);
 
@@ -591,23 +590,36 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	
 
 //======== Discounted TextBox
-		 	txtB_discounted.setBounds( 190,510, 100, 30);
+		 
 		 	txtB_discounted.setFont(new Font("Italiana", Font.BOLD, 30));
-		 	txtB_discounted.setForeground(Color.decode("#904C24"));
-		 	txtB_discounted.setEnabled(false);
-		 
-//======== Payment TextBox
-		 	txtB_payment.setBounds( 160,550, 130, 30);
-		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
-		 	txtB_payment.setForeground(Color.decode("#904C24"));
-		 	txtB_discounted.setEnabled(true);
+		 	txtB_discounted.setForeground(Color.decode("#904C24")); 
+		 	txtB_discounted.setBackground(Color.WHITE); 
+		 	txtB_discounted.setOpaque(true); 
+		 	txtB_discounted.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
 
-		 
+		 	txtB_discounted.setLayout(null);
+		 	txtB_discounted.setBounds(110, 470, 180, 30);
+//======== Payment TextBox
+
+		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
+		 	txtB_payment.setForeground(Color.decode("#904C24")); 
+		 	txtB_payment.setBackground(Color.WHITE); 
+		 	txtB_payment.setOpaque(true); 
+		 	txtB_payment.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
+
+		 	txtB_payment.setLayout(null);
+		 	txtB_payment.setBounds(110, 470, 180, 30);
 //======== Change TextBox
-		 	txtB_change.setBounds( 140, 590, 150, 30);
+	
 		 	txtB_change.setFont(new Font("Italiana", Font.BOLD, 30));
-		 	txtB_change.setForeground(Color.decode("#904C24"));
-		 	txtB_change.setEnabled(false);
+		 	txtB_change.setForeground(Color.decode("#904C24")); 
+		 	txtB_change.setBackground(Color.WHITE); 
+		 	txtB_change.setOpaque(true); 
+		 	txtB_change.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
+
+		 	txtB_change.setLayout(null);
+		 	txtB_change.setBounds(110, 470, 180, 30);
+
 		 
 		 
 //======================= Button For Panel 4 =================================//

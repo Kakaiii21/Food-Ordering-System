@@ -571,25 +571,14 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	change.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	change.setForeground(Color.decode("#F8D8C3"));
 		 	change.setOpaque(false);
-		 	
-		 	
-//======================= Textbox For Panel 4 =================================//
 		 
 //======== Total TextBox
-		    txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
-	        txtB_total.setForeground(Color.decode("#904C24")); 
-	        txtB_total.setBackground(Color.WHITE); 
-	        txtB_total.setOpaque(true); 
-	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
-
-	        // Set layout and position
-	        txtB_total.setLayout(null);
-	        txtB_total.setBounds(110, 470, 180, 30);
-
-	
-
-	
-
+		 	txtB_total.setLayout(null);
+		 	txtB_total.setBounds( 110,470, 180, 30);
+		 	txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
+		 	txtB_total.setForeground(Color.decode("#904C24"));
+		 	txtB_total.setEnabled(false);
+		 
 //======== Discounted TextBox
 		 	txtB_discounted.setBounds( 190,510, 100, 30);
 		 	txtB_discounted.setFont(new Font("Italiana", Font.BOLD, 30));
@@ -600,8 +589,6 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	txtB_payment.setBounds( 160,550, 130, 30);
 		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
-		 	txtB_discounted.setEnabled(true);
-
 		 
 //======== Change TextBox
 		 	txtB_change.setBounds( 140, 590, 150, 30);

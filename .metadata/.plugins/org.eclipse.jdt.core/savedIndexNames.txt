@@ -1,4 +1,3 @@
-INDEX VERSION 1.134+C:\Users\User\OneDrive\Casey_one_drive\OneDrive\Documents\BSIT_1E_2nd_SEM\MIDTERM\Food-Ordering-System\.metadata\.plugins\org.eclipse.jdt.core
+INDEX VERSION 1.134+C:\Users\CLI PC\Desktop\Dellamas\Food-Ordering-System\.metadata\.plugins\org.eclipse.jdt.core
 1865797976.index
-985749750.index
 3368033960.index

@@ -658,7 +658,7 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			panel4.add(panel_SP);
 //______________________________Frame____________________________________________//
 		
-			this.setSize(3000, 800);
+			this.setSize(1550, 800);
 			this.setLocationRelativeTo(null);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			this.setResizable(false);

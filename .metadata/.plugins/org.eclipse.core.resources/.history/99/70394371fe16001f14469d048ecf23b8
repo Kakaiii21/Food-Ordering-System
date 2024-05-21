@@ -687,6 +687,7 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 
 //======== Total TextBox
 		    txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/99/70394371fe16001f14469d048ecf23b8
 	        txtB_total.setBackground(Color.WHITE); 
 	        txtB_total.setOpaque(true); 
 	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
@@ -694,6 +695,13 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	        txtB_total.setEnabled(false);
 
 
+========
+	        txtB_total.setForeground(Color.decode("#904C24")); 
+	        txtB_total.setBackground(Color.WHITE); 
+	        txtB_total.setOpaque(true); 
+	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
+
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/18/10c2c85e3e13001f1ff1e6cd45237b77
 	        // Set layout and position
 	        txtB_total.setLayout(null);
 	        txtB_total.setBounds(110, 470, 180, 30);
@@ -713,6 +721,10 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	txtB_payment.setBounds( 160,550, 130, 30);
 		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/99/70394371fe16001f14469d048ecf23b8
+========
+		 	txtB_discounted.setEnabled(true);
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/18/10c2c85e3e13001f1ff1e6cd45237b77
 
 		 
 //======== Change TextBox
@@ -891,7 +903,11 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			panel4.add(panel_SP);
 //______________________________Frame____________________________________________//
 		
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/99/70394371fe16001f14469d048ecf23b8
 			this.setSize(1550, 800);
+========
+			this.setSize(1700, 800);
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/18/10c2c85e3e13001f1ff1e6cd45237b77
 			this.setLocationRelativeTo(null);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			this.setResizable(false);

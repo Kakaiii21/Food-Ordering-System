@@ -704,6 +704,10 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	txtB_payment.setBounds( 160,550, 130, 30);
 		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/a6/80a04391fd16001f1975875031c060e9
+========
+		 	txtB_discounted.setEnabled(true);
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/db/f0a23c393e13001f1ff1e6cd45237b77
 
 		 
 //======== Change TextBox

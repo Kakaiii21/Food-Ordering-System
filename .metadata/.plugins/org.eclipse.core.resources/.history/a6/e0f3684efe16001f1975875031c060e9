@@ -704,6 +704,10 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	txtB_payment.setBounds( 160,550, 130, 30);
 		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/a6/e0f3684efe16001f1975875031c060e9
+========
+		 	txtB_discounted.setEnabled(true);
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/6f/d0a6da4d3e13001f1ff1e6cd45237b77
 
 		 
 //======== Change TextBox
@@ -874,7 +878,11 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			panel4.add(panel_SP);
 //______________________________Frame____________________________________________//
 		
+<<<<<<<< HEAD:.metadata/.plugins/org.eclipse.core.resources/.history/a6/e0f3684efe16001f1975875031c060e9
 			this.setSize(1550, 800);
+========
+			this.setSize(100, 800);
+>>>>>>>> 85354f2dafe1ad7a9729931ce0b021af1f247b97:.metadata/.plugins/org.eclipse.core.resources/.history/6f/d0a6da4d3e13001f1ff1e6cd45237b77
 			this.setLocationRelativeTo(null);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			this.setResizable(false);

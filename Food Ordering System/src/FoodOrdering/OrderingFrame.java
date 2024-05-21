@@ -2,6 +2,7 @@ package FoodOrdering;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
+import java.awt.Dialog;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GraphicsEnvironment;
@@ -18,121 +19,177 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	
 
 	
-	JPanel panel_name = new JPanel();
-	JLabel name_brew = new JLabel("Brew And Baked Cafe", SwingConstants.CENTER);
+		JPanel panel_name = new JPanel();
+		JLabel name_brew = new JLabel("Brew And Baked Cafe", SwingConstants.CENTER);
 	
-	JPanel panel1 = new JPanel();
-	JPanel panel2 = new JPanel();
-	JPanel panel3 = new JPanel();
-	JPanel panel4 = new JPanel();
-	JPanel panel_SP = new JPanel();
+		JPanel panel1 = new JPanel();
+		JPanel panel2 = new JPanel();
+		JPanel panel3 = new JPanel();
+		JPanel panel4 = new JPanel();
+		JPanel panel_SP = new JPanel();
+
+		
+		
+		JButton Dbtn = new JButton();
+	
+		JPanel pOrder = new JPanel();
+
+//------------- Receipt Labels
+		
+		JLabel Topn =  new JLabel();
+		JLabel Topn2 =  new JLabel();
+		JLabel Topn3 =  new JLabel();
+		JLabel Topn_O =  new JLabel();
+
+		JLabel Topn4 =  new JLabel();
+		JLabel Topn5 =  new JLabel();
+		JLabel Topn6 =  new JLabel();
+		JLabel Topn7 =  new JLabel();
+
+		
+		JLabel line1 = new JLabel();
+		
+		
+//------------- Receipt Inside Labels 
+
+		JLabel Ritems = new JLabel();
+		JLabel Rprice = new JLabel();
+
+		JLabel line2 = new JLabel();
+		
+		
+//------------- Receipt End Labels 
+
+		JLabel Rdiscount=  new JLabel();
+		JLabel R_discount=  new JLabel();
+		JLabel Rtotal =  new JLabel();
+		JLabel R_total =  new JLabel();
+		JLabel Rpayment =  new JLabel();
+		JLabel R_payment =  new JLabel();
 
 	
-	
+
+		JLabel line3 = new JLabel();
+		JLabel Rchange =  new JLabel();
+		JLabel R_change =  new JLabel();
+		JLabel txt1 = new JLabel();
+		JLabel txt2 = new JLabel();
+		JLabel txt3 = new JLabel();
+
+		JLabel Name =  new JLabel();
+		JLabel product =  new JLabel();
+		JLabel priceL =  new JLabel();
+		
+		
+
+		
+
 //--------Radio Buttons
-	JRadioButton rbDineIn = new JRadioButton();
-	JRadioButton rbTakeOut = new JRadioButton();
-	ButtonGroup bgButton = new ButtonGroup();
+			JRadioButton rbDineIn = new JRadioButton();
+			JRadioButton rbTakeOut = new JRadioButton();
+			ButtonGroup bgButton = new ButtonGroup();
 	
 	
 	
 //--------CheckBox for Coffee Panel
 
-	JCheckBox[] cbCoffee = new JCheckBox[10];
-	String[] menuCoffee = {"Latte", "Machiatto",
-	"Irish Coffee", "Cafe Mocha", "Matcha Latte",
-	"Affogato", "Hot Chocolate", "Cappuccino",
-	"Americano", "Flat White"};
+			JCheckBox[] cbCoffee = new JCheckBox[10];
+			String[] menuCoffee = {"Latte", "Machiatto",
+					"Irish Coffee", "Cafe Mocha", "Matcha Latte",
+					"Affogato", "Hot Chocolate", "Cappuccino",
+					"Americano", "Flat White"};
 	
-	double[] menuPrice = {50.00, 100.00, 150.00, 200.00, 250.00, 300.00, 350.00, 400.00, 450.00, 500.00};
-	JLabel[] lblPrice = new JLabel[10];
+			double[] menuPrice = {50.00, 100.00, 150.00, 200.00, 250.00, 300.00, 350.00, 400.00, 450.00, 500.00};
+			JLabel[] lblPrice = new JLabel[10];
 	
 
 
-	DefaultListModel<String> dlmItem1 = new DefaultListModel<String>();
-	JList<String> lItem1 = new JList<String>(dlmItem1);
+			DefaultListModel<String> dlmItem1 = new DefaultListModel<String>();
+			JList<String> lItem1 = new JList<String>(dlmItem1);
 
-	DefaultListModel<String> dlmPrice1 = new DefaultListModel<String>();
+			DefaultListModel<String> dlmPrice1 = new DefaultListModel<String>();
 
-	JScrollPane spScroll1 = new JScrollPane(lItem1);
+			JScrollPane spScroll1 = new JScrollPane(lItem1);
 	
 
 //--------CheckBox for Pastries	Panel
 	
-	JCheckBox[] cbPastries = new JCheckBox[10];
-	String[] menuPastries = {"Croissant", "Danish Pastry", "Muffin", 
-			"Scone", "Cinnamon Roll", "Éclair", "Painau Chocolat", 
-			"Turnover", "Macaron", "Palmier"};
+			JCheckBox[] cbPastries = new JCheckBox[10];
+			String[] menuPastries = {"Croissant", "Danish Pastry", "Muffin", 
+					"Scone", "Cinnamon Roll", "Éclair", "Painau Chocolat", 
+					"Turnover", "Macaron", "Palmier"};
 	
-	double[] menuPrice_Pastries = {50.00, 100.00, 150.00, 200.00, 250.00, 300.00, 350.00, 400.00, 450.00, 500.00};
-	JLabel[] lblPastries = new JLabel[10];
+			double[] menuPrice_Pastries = {50.00, 100.00, 150.00, 200.00, 250.00, 300.00, 350.00, 400.00, 450.00, 500.00};
+			JLabel[] lblPastries = new JLabel[10];
 
 	
 	
 //--------CheckBox for Smoothies Panel
 	
-		JCheckBox[] cbSmoothies = new JCheckBox[5];
-		String[] menuSmoothies = {"Berry Blast", "Tropical Delight", "Green Detox", 
+			JCheckBox[] cbSmoothies = new JCheckBox[5];
+			String[] menuSmoothies = {"Berry Blast", "Tropical Delight", "Green Detox", 
 				"Banana", "Citrus Splash"};
 		
-		double[] menuPrice_Smoothies = {300.00, 350.00, 400.00, 450.00, 500.00};
-		JLabel[] lblSmoothies = new JLabel[5];
+			double[] menuPrice_Smoothies = {300.00, 350.00, 400.00, 450.00, 500.00};
+			JLabel[] lblSmoothies = new JLabel[5];
 
 //--------CheckBox for Pastries	Panel
-		
-		JCheckBox[] cbAdd_ons = new JCheckBox[5];
-		String[] menuAdd_ons = {"Whipped Cream", "Extra Espresso Shot", "Flavored Syrup", 
+			
+			JCheckBox[] cbAdd_ons = new JCheckBox[5];
+			String[] menuAdd_ons = {"Whipped Cream", "Extra Espresso Shot", "Flavored Syrup", 
 				"Cinnamon Powder", "Chocolate Shavings"};
 		
-		double[] menuPrice_Add_ons = {300.00, 350.00, 400.00, 450.00, 500.00};
-		JLabel[] lblAdd_ons = new JLabel[5];
+			double[] menuPrice_Add_ons = {300.00, 350.00, 400.00, 450.00, 500.00};
+			JLabel[] lblAdd_ons = new JLabel[5];
 		
 //---------- Labels in Panel 1
-		JLabel coffee = new JLabel();
+			JLabel coffee = new JLabel();
 	
 //---------- Labels in Panel 2	
 
-		JLabel pastries = new JLabel();
+			JLabel pastries = new JLabel();
 	
 //---------- Labels in Panel 3	
 
-		JLabel smoothies = new JLabel();
-		JLabel Add_ons = new JLabel();
+			JLabel smoothies = new JLabel();
+			JLabel Add_ons = new JLabel();
 	
 
 //---------- Labels in Panel 4	
 
-		JLabel orderD = new JLabel();
+			JLabel orderD = new JLabel();
 
 	
-		JLabel discount = new JLabel();
-		JRadioButton studentD = new JRadioButton();
-		JRadioButton seniorD = new JRadioButton();
-		JRadioButton pwdD = new JRadioButton();
-		ButtonGroup DisC_Button = new ButtonGroup();
+			JLabel discount = new JLabel();
+			JRadioButton studentD = new JRadioButton();
+			JRadioButton seniorD = new JRadioButton();
+			JRadioButton pwdD = new JRadioButton();
+			ButtonGroup DisC_Button = new ButtonGroup();
 
-		JLabel total = new JLabel();
-		JLabel discounted = new JLabel();
-		JLabel payment = new JLabel();
-		JLabel change = new JLabel();
+			JLabel total = new JLabel();
+			JLabel discounted = new JLabel();
+			JLabel payment = new JLabel();
+			JLabel change = new JLabel();
 
-		JButton cancel = new JButton();
-		JButton buy = new JButton();
+			JButton cancel = new JButton();
+			JButton buy = new JButton();
 	
 //---------- TextFields in Panel 4	
 	
-		JTextField txtB_total = new JTextField();
-		JTextField txtB_discounted = new JTextField();
-		JTextField txtB_payment = new JTextField();
-		JTextField txtB_change = new JTextField();
+			JTextField txtB_total = new JTextField();
+			JTextField txtB_discounted = new JTextField();
+			JTextField txtB_payment = new JTextField();
+			JTextField txtB_change = new JTextField();
 
 
-	
+			double price = 0;
+			double Discount = 0;
+			double Discounted = 0;
 	
 	OrderingFrame(){
 		
 		
-		
+	 
 		
 			Image IconImage = new ImageIcon("Logo.png").getImage();
 			this.setIconImage(IconImage);
@@ -294,10 +351,13 @@ public class OrderingFrame extends JFrame implements ActionListener {
 
 //=================================== CheckBox For Pastries =========================//
 		 
+		 	
 		 	int yp = 230;
 			for(int i = 0; i < 10; i++){
 
 //----------CheckBox for Pastries Menu
+				
+				
 			cbPastries[i] = new JCheckBox();
 			cbPastries[i].setBounds(20, yp, 300, 30);
 			cbPastries[i].setText(menuPastries[i]);
@@ -308,7 +368,10 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			cbPastries[i].addActionListener(this);
 			cbPastries[i].setFocusable(false);
 					
+			
 //----------CheckBox for Pastries Price
+			
+			
 			lblPastries[i] = new JLabel();
 			lblPastries[i].setBounds(280, yp, 150, 30);
 			lblPastries[i].setText( "₱ " + String.format("%.2f",  menuPrice[i]));
@@ -319,7 +382,9 @@ public class OrderingFrame extends JFrame implements ActionListener {
 
 
 
-			 //---------add
+//-------------------------add
+			
+			
 					panel2.add(cbPastries[i]);
 					panel2.add(lblPastries[i]);
 
@@ -356,6 +421,7 @@ public class OrderingFrame extends JFrame implements ActionListener {
 				for(int i = 0; i < 5; i++){
 
 //----------CheckBox for Smoothies Menu
+					
 			cbSmoothies[i] = new JCheckBox();
 			cbSmoothies[i].setBounds(20, ys, 300, 30);
 			cbSmoothies[i].setText(menuSmoothies[i]);
@@ -367,21 +433,23 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			cbSmoothies[i].setFocusable(false);
 							
 //----------CheckBox for Smoothies Price
+			
 			lblSmoothies[i] = new JLabel();
 			lblSmoothies[i].setBounds(280, ys, 150, 30);
 			lblSmoothies[i].setText( "₱ " + String.format("%.2f",  menuPrice[i]));
 			lblSmoothies[i].setFont(new Font("Sans Serif", Font.PLAIN, 20));
 			lblSmoothies[i].setForeground(Color.decode("#FEECE0"));
 			lblSmoothies[i].setFocusable(false);
-
-
-
-
-		//---------add
+			
+			
+			
+			
+//---------------------add
+			
 			panel3.add(cbSmoothies[i]);
 			panel3.add(lblSmoothies[i]);
 
-			ys+=35;
+				ys+=35;
 
 								 }
 				 		
@@ -481,6 +549,14 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			rbDineIn.setFont(new Font("Italiana", Font.BOLD, 20));
 			rbDineIn.setForeground(Color.decode("#F8D8C3"));
 			rbDineIn.setOpaque(false);
+			rbDineIn.addActionListener(new ActionListener () {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					Topn5.setText("Dine In");
+					
+				}});
 		 
 //------Radio Button For Take Out
 
@@ -490,14 +566,22 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			rbTakeOut.setFont(new Font("Italiana", Font.BOLD, 20));
 			rbTakeOut.setForeground(Color.decode("#F8D8C3"));
 			rbTakeOut.setOpaque(false);
+			
+			rbTakeOut.addActionListener(new ActionListener () {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					Topn5.setText("Take Out");
+					
+				}});
 		 
 //------ButtonGroup
 		 
 			bgButton.add(rbDineIn);
 			bgButton.add(rbTakeOut);
 		 
-		 
-	
+		
 		 
 		 
 //-----------Discount
@@ -515,6 +599,20 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	studentD.setFont(new Font("Italiana", Font.BOLD, 13));
 		 	studentD.setForeground(Color.decode("#F8D8C3"));
 		 	studentD.setOpaque(false);
+		 	studentD.addActionListener(new ActionListener () {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+					Discount = price * 0.03;
+
+					Discounted = price - Discount;
+
+					txtB_total.setText(String.format("%.2f", Discounted));
+
+					txtB_discounted.setText(String.format("%.2f", Discount));
+
+				}});
 		 
 		 
 		 	seniorD.setBounds(115, 420, 100, 30);
@@ -523,6 +621,19 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	seniorD.setFont(new Font("Italiana", Font.BOLD, 13));
 		 	seniorD.setForeground(Color.decode("#F8D8C3"));
 		 	seniorD.setOpaque(false);
+		 	seniorD.addActionListener(new ActionListener () {
+
+			public void actionPerformed(ActionEvent e) {
+
+				Discount = price * 0.20;
+
+				Discounted = price - Discount;
+
+				txtB_total.setText(String.format("%.2f", Discounted));
+
+				txtB_discounted.setText(String.format("%.2f", Discount));
+
+			}});
 		 
 		 	pwdD.setBounds(215, 420, 100, 30);
 		 	pwdD.setText("PWD(40%)");
@@ -530,6 +641,19 @@ public class OrderingFrame extends JFrame implements ActionListener {
 		 	pwdD.setFont(new Font("Italiana", Font.BOLD, 13));
 		 	pwdD.setForeground(Color.decode("#F8D8C3"));
 		 	pwdD.setOpaque(false);
+		 	pwdD.addActionListener(new ActionListener () {
+
+				public void actionPerformed(ActionEvent e) {
+
+					Discount = price * 0.40;
+
+					Discounted = price - Discount;
+
+					txtB_total.setText(String.format("%.2f", Discounted));
+
+					txtB_discounted.setText(String.format("%.2f", Discount));
+
+				}});
 		 
 		 
 		 	DisC_Button.add(studentD);
@@ -576,13 +700,14 @@ public class OrderingFrame extends JFrame implements ActionListener {
 //======================= Textbox For Panel 4 =================================//
 		 
 //======== Total TextBox
-		    txtB_total.setFont(new Font("Italiana", Font.BOLD, 30));
-	        txtB_total.setForeground(Color.decode("#904C24")); 
+		    txtB_total.setFont(new Font("Italiana", Font.BOLD, 20));
 	        txtB_total.setBackground(Color.WHITE); 
 	        txtB_total.setOpaque(true); 
 	        txtB_total.setBorder(BorderFactory.createLineBorder(Color.GRAY)); 
+	        txtB_total.setDisabledTextColor(Color.decode("#904C24"));
+	        txtB_total.setEnabled(false);
 
-	        // Set layout and position
+
 	        txtB_total.setLayout(null);
 	        txtB_total.setBounds(110, 470, 180, 30);
 
@@ -592,20 +717,20 @@ public class OrderingFrame extends JFrame implements ActionListener {
 
 //======== Discounted TextBox
 		 	txtB_discounted.setBounds( 190,510, 100, 30);
-		 	txtB_discounted.setFont(new Font("Italiana", Font.BOLD, 30));
-		 	txtB_discounted.setForeground(Color.decode("#904C24"));
+		 	txtB_discounted.setFont(new Font("Italiana", Font.BOLD, 20));
 		 	txtB_discounted.setEnabled(false);
+		 	txtB_discounted.setDisabledTextColor(Color.decode("#904C24"));
+
 		 
 //======== Payment TextBox
 		 	txtB_payment.setBounds( 160,550, 130, 30);
-		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 30));
+		 	txtB_payment.setFont(new Font("Italiana", Font.BOLD, 20));
 		 	txtB_payment.setForeground(Color.decode("#904C24"));
-		 	txtB_discounted.setEnabled(true);
 
 		 
 //======== Change TextBox
 		 	txtB_change.setBounds( 140, 590, 150, 30);
-		 	txtB_change.setFont(new Font("Italiana", Font.BOLD, 30));
+		 	txtB_change.setFont(new Font("Italiana", Font.BOLD, 20));
 		 	txtB_change.setForeground(Color.decode("#904C24"));
 		 	txtB_change.setEnabled(false);
 		 
@@ -620,9 +745,45 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	 		cancel.setFont(new Font("Inria Serif", Font.TRUETYPE_FONT , 30));
 	 		cancel.setBackground(Color.white);
 	 		cancel.setFocusable(false);
+	 		cancel.addActionListener(new ActionListener () {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+
+
+				    for (JCheckBox checkBox : cbCoffee) {
+				        checkBox.setSelected(false);
+				    }
+				    for (JCheckBox checkBox : cbPastries) {
+				        checkBox.setSelected(false);
+				    }
+				    for (JCheckBox checkBox : cbSmoothies) {
+				        checkBox.setSelected(false);
+				    }
+				    for (JCheckBox checkBox : cbAdd_ons) {
+				        checkBox.setSelected(false);
+				    }
+
+						dlmItem1.clear();
+					    dlmPrice1.clear();
+					   
+					    DisC_Button.clearSelection();
+					    bgButton.clearSelection();
+
+					    txtB_total.setText("");
+					    txtB_payment.setText("");
+					    txtB_discounted.setText("");
+					    txtB_change.setText("");
+					   
+					   
+
+
+
+
+				}});
 	 		
 		 
-//------------------Cancel Button
+//------------------Buy Button
 		 
 	 		buy.setBounds(170,650,125,50);
 	 		buy.setText("Buy");
@@ -630,9 +791,231 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	 		buy.setFont(new Font("Inria Serif", Font.TRUETYPE_FONT , 30));
 	 		buy.setBackground(Color.white);
 	 		buy.setFocusable(false);
-		 
+	 		buy.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					
+				
+
+	 			if(dlmItem1.isEmpty()) {
+	 				JOptionPane.showMessageDialog(null, "Please Select An Order");
+	 				} else if (txtB_payment.getText().equals("")) {
+	 				JOptionPane.showMessageDialog(null, "Please Enter Your Payment");
+	 				} else {
+	 				double amount = Double.parseDouble(txtB_total.getText());
+	 				double payment = Double.parseDouble(txtB_payment.getText());
+
+	 				if(payment < amount) {
+	 				JOptionPane.showMessageDialog(null, "Please Enter The Right Amount");
+	 				}
+	 				else {
+	 					double change = payment - amount;
+	 					txtB_change.setLayout(null);
+	 					txtB_change.setText(String.format("%.2f", change));
+	 					txtB_change.setDisabledTextColor(Color.decode("#904C24"));
+	 					
+	 					int x = 10;
+	 					JDialog dialog = new JDialog(null, Dialog.DEFAULT_MODALITY_TYPE);
+	 					dialog.setSize(300, (dlmItem1.getSize() * x) + 400);
+	 					dialog.setLocationRelativeTo(null);
+	 					dialog.setForeground(Color.decode("#E4C59E"));
+
+//---------------------------Top Part of the Receipt
+	 					
+	 					
+	 					Topn.setBounds(100,3,200,50);
+	 					Topn.setText("Brew And Baked Cafe");
+	 					Topn.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					Topn2.setBounds(110,13,200,50);
+	 					Topn2.setText("2004,Maple Lane");
+	 					Topn2.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					Topn3.setBounds(90,23,200,50);
+	 					Topn3.setText("Capas, Tarlac, PA 090105");
+	 					Topn3.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					
+	 					Topn_O.setBounds(80,50,200,50);
+	 					Topn_O.setText("Order: 01");
+	 					Topn_O.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 30));
+	 					
+
+	 					Topn4.setBounds(20,90,200,50);
+	 					Topn4.setText("Cashier: Casey Pangilinan");
+	 					Topn4.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					
+	 					Topn5.setBounds(20,105,200,50);
+	 					Topn5.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					
+	 					Topn6.setBounds(220,90,200,50);
+	 					Topn6.setText("23-05-2024");
+	 					Topn6.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					Topn7.setBounds(220,105,200,50);
+	 					Topn7.setText("09:01 PM");
+	 					Topn7.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					line1.setBounds(10,125,275,50);
+	 					line1.setText("----------------------------------------------------------------------------------------------------------------------------------");
+	 					line1.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+
+//--------------------------- 2 Top Part of the Receipt
+
+	 					Ritems.setBounds(30,150,100,50);
+	 					Ritems.setText("ITEMS");
+	 					Ritems.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 15));
+	 					
+	 					Rprice.setBounds(210,150,100,50);
+	 					Rprice.setText("PRICE");
+	 					Rprice.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 15));
+	 					
+	 					pOrder.setBackground(Color.white);
+	 					pOrder.setLayout(null);
+	 					
+	 					int yy = 190;
+	 					JLabel[] lblItem = new JLabel[dlmItem1.getSize()];
+	 					for (int i = 0; i < dlmItem1.getSize(); i++) {
+
+		 			
+
+	 					lblItem[i] = new JLabel();
+	 					lblItem[i].setBounds(30, yy , 150, 20);
+	 					lblItem[i].setText(dlmItem1.elementAt(i));
+	 					lblItem[i].setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+
+	 					pOrder.add(lblItem[i]);
+	 					yy += 20;
+
+	 					}
+	 					int y = 190;
+	 					JLabel[] lblPrice = new JLabel[dlmPrice1.getSize()];
 
 
+	 					for (int i = 0; i < dlmPrice1.getSize(); i++) {
+	 					lblPrice[i] = new JLabel();
+	 					lblPrice[i].setBounds(220, y , 150, 30);
+	 					lblPrice[i].setText("₱" + dlmPrice1.elementAt(i));
+	 					lblPrice[i].setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+
+	 					
+	 					line2.setBounds(10,y + 10,300,50);
+	 					line2.setText("---------------------------------------------------------------------");
+	 					line2.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+	 					
+	 					Rdiscount.setBounds(30,y + 30 ,275,50);
+	 					Rdiscount.setText("Discount: ");
+	 					Rdiscount.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					R_discount.setBounds(220,y + 30 ,275,50);
+	 					R_discount.setText("₱" + txtB_discounted.getText());
+	 					R_discount.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					Rtotal.setBounds(30,y + 50 ,275,50);
+	 					Rtotal.setText("Total: ");
+	 					Rtotal.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					R_total.setBounds(220,y + 50 ,275,50);
+	 					R_total.setText("₱" + txtB_total.getText());
+	 					R_total.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					Rpayment.setBounds(30,y + 70 ,275,50);
+	 					Rpayment.setText("Payment: ");
+	 					Rpayment.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					R_payment.setBounds(220,y + 70 ,275,50);
+	 					R_payment.setText("₱" + txtB_payment.getText());
+	 					R_payment.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					line3.setBounds(10,y + 80 + 10,300,50);
+	 					line3.setText("---------------------------------------------------------------------");
+	 					line3.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+	 					
+	 					Rchange.setBounds(30,y + 110 ,275,50);
+	 					Rchange.setText("Change: ");
+	 					Rchange.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+	 					R_change.setBounds(220,y + 110 ,275,50);
+	 					R_change.setText("₱" + txtB_change.getText());
+	 					R_change.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 12));
+
+
+	 					txt1.setBounds(105,y + 150,200,50);
+	 					txt1.setText("Thanks for Visiting");
+	 					txt1.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					txt2.setBounds(100,y + 160,200,50);
+	 					txt2.setText("Brew And Baked Cafe");
+	 					txt2.setFont(new Font("Roboto Mono", Font.TRUETYPE_FONT , 10));
+	 					
+	 					txt3.setBounds(60,y + 195,200,50);
+	 					txt3.setText("11212004-09012005");
+	 					txt3.setFont(new Font("Libre Barcode 128", Font.TRUETYPE_FONT , 50));
+	 					
+	 					pOrder.add(lblPrice[i]);
+	 					y += 20;
+	 					
+	 					
+	 					
+	 					}
+	 					x += 15;
+	 					dialog.setSize(300, (dlmItem1.getSize() * x) + 400);
+	 					
+	 					dialog.add(pOrder);
+	 					pOrder.add(Topn);
+	 					pOrder.add(Topn2);
+	 					pOrder.add(Topn3);
+	 					pOrder.add(Topn_O);
+	 					pOrder.add(Topn4);
+	 					pOrder.add(Topn5);
+	 					pOrder.add(Topn6);
+	 					pOrder.add(Topn7);
+	 					pOrder.add(line1);
+	 					
+	 					
+	 					
+	 					pOrder.add(Ritems);
+	 					pOrder.add(Rprice);
+	 					pOrder.add(line2);
+	 					
+	 					pOrder.add(Rdiscount);
+	 					pOrder.add(R_discount);
+	 					pOrder.add(Rtotal);
+	 					pOrder.add(R_total);
+	 					pOrder.add(Rpayment);
+	 					pOrder.add(R_payment);
+
+	 					
+	 					
+	 					pOrder.add(line3);
+	 					pOrder.add(Rchange);
+	 					pOrder.add(R_change);
+	 					pOrder.add(txt1);
+	 					pOrder.add(txt2);
+	 					pOrder.add(txt3);
+	 					
+
+
+	 					
+	 					
+
+	 					
+	 					dialog.setUndecorated(true);
+	 					dialog.setVisible(true);
+
+	 				
+	 						}
+
+	 					}
+
+	 				
+
+
+
+	 				}});
 		
 //______________________________Panel For ScrollPane____________________________________________//
 		
@@ -658,7 +1041,7 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			panel4.add(panel_SP);
 //______________________________Frame____________________________________________//
 		
-			this.setSize(3000, 800);
+			this.setSize(1550, 800);
 			this.setLocationRelativeTo(null);
 			this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 			this.setResizable(false);
@@ -681,7 +1064,6 @@ public class OrderingFrame extends JFrame implements ActionListener {
 			this.setVisible(true);
 	}
 
-			double price = 0;
 
 
 	@Override
@@ -778,10 +1160,12 @@ public class OrderingFrame extends JFrame implements ActionListener {
 	   }
 
 }
-
+		   
+    
+	}
 }
 
-}
+
 		
 		
 	
